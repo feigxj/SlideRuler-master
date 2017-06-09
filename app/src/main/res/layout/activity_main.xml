@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jack.slideruler.Mview
+    android:id="@+id/mview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        tools:context="com.jack.slideruler.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="10px"
+            android:background="#25aed0"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:text="显示窗口控件位置高度100px"/>
+
+            <TextView
+                android:id="@+id/actionBar"
+                android:layout_width="match_parent"
+                android:layout_height="50px"
+                android:background="#999999"
+                android:gravity="center"
+                android:text="actionBar"/>
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:text="1000"
+            android:textSize="20dp"
+            android:visibility="gone"/>
+
+        <com.jack.slideruler.SlideRuler
+            android:id="@+id/slideruler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            app:current_value="1500"
+            app:max_value="200000"
+            app:min_currentValue="1000"
+            app:min_unitValue="1000"
+            app:min_value="0"
+            app:textSize="16dp"/>
+
+    </LinearLayout>
+</com.jack.slideruler.Mview>
